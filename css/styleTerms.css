@@ -1,0 +1,504 @@
+/*------
+fonts
+------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/*------
+global css
+------*/
+:root{
+    --main-color: #1E90FF;
+    --color-1: #e91e63;
+    --color-2: #f5ae10;
+    --color-3: #09d69c;
+    --bg-dark: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 15px rgba(0,0,0, 0.1);
+    --shadow-black-300: 0 5px 15px rgba(0,0,0, 0.3);
+    --black-900: #000000;
+    --black-400: #555555;
+    --black-100: #f7f7f7;
+    --black-000: #ffffff;
+    --black-alpha-100: rgba(0,0,0,0.05);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none!important;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+.btn-1{
+    background-color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 500;
+}
+.btn-1:focus{
+    box-shadow: var(--shadow-black-300);
+}
+.btn-1:hover{
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+.btn-2{
+    background-color: var(--main-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-100);
+    font-weight: 500;
+}
+.btn-2:focus{
+    box-shadow: var(--shadow-black-100);
+}
+.btn-2:hover{
+    color: var(--main-color);
+    background-color: #ffffff;
+}
+
+.btn-3{
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:var(--main-color);
+	border-radius:14px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	padding: 5px 8px 5px 5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.btn-3:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.btn-3:active {
+	position:relative;
+	top:1px;
+}
+
+/* specifica un'animazione in css. Indico punto partenza e arrivo
+muove il cerchio attorno*/
+@keyframes spin_01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* muove l'immagine in alto e basso */
+@keyframes bounceTop_01{
+    0%, 100%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+}
+/*effetto pulsazione bottone play*/
+@keyframes pulse_01{
+    0%{
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+    }
+    100%{
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.section-padding{
+    padding: 80px 0;
+}
+
+.section-title{
+    margin-bottom: 60px;
+}
+.section-title h2{
+    font-size: 40px;
+    color: var(--black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.section-title h3{
+    margin-top: 50px;
+    font-size: 25px;
+    color: var(--black-900);
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.section-title h2 span{
+    text-align: left;
+    color: var(--main-color);
+}
+
+/*bottoni carosello sotto*/
+.owl-carousel .owl-dots{
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+/*bottone carosello sotto*/
+.owl-carousel button.owl-dot{
+    height: 6px;
+    width: 24px;
+    background-color: #dddddd;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+/*mettere il colore sul carosello basso*/
+.owl-carousel button.owl-dot.active{
+    background-color: var(--main-color);
+}
+/*------
+navbar
+------*/
+.navbar{
+    background-color: var(--main-to-dark-color);
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.navbar.navbar-shrink{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    background-color: var(--main-color);
+    padding:10px 0;
+}
+/* Seleziona tutti gli elementi navbar ​​in cui il genitore è un elemento container */
+.navbar > .container{
+    padding: 0 15px;
+}
+
+/* Seleziona tutti gli elementi con navbar-brand che è un discendente di un elemento con navbar */
+.navbar .navbar-brand{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.navbar .nav-item{
+    margin-left: 40px;
+}
+
+.navbar .nav-item .nav-link{
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar .nav-item .nav-link::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navbar .nav-item .nav-link:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+/*Le trasformazioni CSS consentono di spostare, ruotare, ridimensionare e inclinare gli elementi. */
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before{
+    transform: scale(1);
+}
+
+
+
+/*------
+home section
+------*/
+.home{
+    /*Relativo all'1% dell'altezza della finestra*/
+    min-height: 100vh;
+    padding: 150px 0;
+    background-color: var(--black-100);
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+}
+.home-text h1{
+    font-size: 45px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+.home-text p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 300;
+
+}
+
+.home .home-btn{
+    margin-top: 40px;
+}
+
+.home .home-btn{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    font-size: 16px;
+    animation: pulse_01 2s ease infinite;
+}
+
+
+.home-img img{
+    max-width: 250px;
+    width: 100%;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+.home-img{
+    position: relative;
+}
+
+.home-img .circle{
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-img .circle::before{
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    transform-origin: 170px 170px;
+    animation: spin_01 10s linear infinite;
+}
+
+
+
+/*-----------
+Footer section
+---------------*/
+.footer{
+    position:relative;
+    bottom:0;
+
+    background-color: var(--main-color);
+    padding: 50px 0 0;
+}
+
+.footer-col h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 25px;
+    text-transform: capitalize;
+}
+
+.footer-col p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+}
+
+.footer-col ul{
+    margin: 0;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    display: block;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+/*sposto a dx i link del footer*/
+.footer-col ul li a:hover{
+    padding-left: 5px;
+}
+
+.footer .copyright-text{
+    padding:20px 0;
+    padding:20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    margin:50px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*-----------
+Responsive
+---------------*/
+@media(max-width: 991px){
+    .navbar-toggler{
+        background-color: var(--main-color);
+        box-shadow: var(--shadow-black-300);
+        height: 34px;
+        width: 44px;
+        padding:0;
+        font-size: 17px;
+        color: #ffffff;
+    }
+
+    .navbar-nav{
+        background-color: var(--main-color);
+        box-shadow: var(--shadow-black-300);
+    }
+
+    .navbar .nav-item{
+        margin: 0;
+        padding: 5px 15px;
+    }
+
+    .navbar.navbar-shrink .navbar-toggler,
+    .navbar.navbar-shrink .navbar-nav{
+        background-color: var(--main-color);
+    }
+
+    .home-img .circle{
+        height: 320px;
+        width: 320px;
+    }
+
+    .home-img .circle::before{
+        left: 18px;
+        top: 18px;
+        transform-origin: 142px 142px;
+    }
+    .home-text h1{
+        font-size: 40px;
+    }
+    .pricing-plan,
+    .how-it-works-item,
+    .app-download-item{
+        margin-bottom: 30px;
+    }
+
+    .how-it-works-item.line-right::before{
+        content: none;
+    }
+
+    .how-it-works-item{
+        box-shadow: var(--shadow-black-100);
+        border-radius: 10px;
+    }
+
+    .footer-col{
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 767px){
+    .home-text{
+        margin-bottom: 80px;
+    }
+    .contact-form{
+        margin-top: 20px;
+    }
+    .section-title h2{
+        font-size: 35px;
+    }
+    .footer{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 575px){
+    .home-text{
+        font-size: 30px;
+    }
+
+    .navbar img{
+        width: inherit;  /* This makes the next two lines work in IE8. */
+        max-width: 100%; /* Add !important if needed. */
+        height: auto;
+    }
+
+    .home-text p{
+        font-size: 16px;
+    }
+    .section-title h2{
+        font-size: 30px;
+    }
+}
