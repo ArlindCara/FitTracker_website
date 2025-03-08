@@ -189,28 +189,36 @@
     /* Logo Styles */
     .logo-container {
       display: flex;
-      align-items: center; 
-    }
-    .app-name {
-      font-size: 24px; 
-      margin-left: 10px; 
-      transition: font-size 0.3s ease;
-    }
-
-    .logo {
-      max-width: 150px;
-      height: auto;
+      align-items: center;
     }
     
+    .logo {
+      max-width: 150px; 
+      height: auto; 
+      width: 100%;
+    }
+    
+    .app-name {
+      font-size: 24px; 
+      margin-left: 10px;
+    }
+    
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       .logo {
-        max-width: 100px; 
+        max-width: 100px;
+      }
+      .app-name {
+        font-size: 18px;
       }
     }
     
     @media (max-width: 480px) {
       .logo {
-        max-width: 20px; 
+        max-width: 80px; /* Even smaller size for mobile */
+      }
+      .app-name {
+        font-size: 16px; /* Smaller font size for mobile */
       }
     }
   </style>
