@@ -17,6 +17,7 @@
   <link rel="icon" href="img/logo_fit.png">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     /* Modern Font */
     body {
@@ -184,6 +185,43 @@
         padding: 15px;
       }
     }
+
+    /* Logo Styles */
+    .logo-container {
+      display: flex;
+      align-items: center; /* Align logo and text vertically */
+    }
+
+    .logo {
+      width: 150px; /* Default size for desktop */
+      height: auto; /* Maintain aspect ratio */
+      transition: width 0.3s ease; /* Smooth resizing */
+    }
+
+    .app-name {
+      font-size: 24px; /* Default font size for desktop */
+      margin-left: 10px; /* Space between logo and text */
+      transition: font-size 0.3s ease; /* Smooth resizing */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .logo {
+        width: 100px; /* Smaller size for tablets */
+      }
+      .app-name {
+        font-size: 18px; /* Smaller font size for tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 80px; /* Even smaller size for mobile */
+      }
+      .app-name {
+        font-size: 16px; /* Smaller font size for mobile */
+      }
+    }
   </style>
 </head>
 
@@ -195,8 +233,8 @@
       <!-- Brand -->
       <div class="col-8 col-md-2">
         <a href="fittracker.com.html" class="logo-container">
-            <img src="img/logo_fit.png" alt="FitTracker Logo">
-            <span class="app-name">FitTracker</span>
+          <img src="img/logo_fit.png" alt="FitTracker Logo" class="logo">
+          <span class="app-name">FitTracker</span>
         </a>
       </div>
       
