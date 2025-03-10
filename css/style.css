@@ -240,6 +240,7 @@ navbar
     width: 100%; 
     left: 0; 
   }
+
 /*Le trasformazioni CSS consentono di spostare, ruotare, ridimensionare e inclinare gli elementi. 
 ----DA TOGLIERE----*/
 .navbar .nav-item .nav-link.active::before,
@@ -249,8 +250,7 @@ navbar
 
 .logo-container {
     display: flex;
-    align-items: center; 
-    text-decoration: none;
+    align-items: center;
 }
 
 .logo-container:hover {
@@ -262,10 +262,84 @@ navbar
     margin-right: 10px; 
 }
 
+.logo {
+    max-width: 150px; 
+    height: auto; 
+    width: 100%;
+}
+
 .app-name {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
+    font-size: 24px; 
+    margin-left: 10px;
+    color: #fff; /* Ensure the app name color is white */
+}
+
+.navbar .col-8.col-md-2 {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Adjustments - Much More Aggressive Size Reduction */
+@media (max-width: 991px) {
+    .navbar .col-8.col-md-2 {
+        flex: 0 0 auto;
+        max-width: 180px;
+    }
+    
+    .logo {
+        max-width: 80px;
+    }
+    
+    .app-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .col-8.col-md-2 {
+        flex: 0 0 auto;
+        max-width: 160px;
+    }
+    
+    .logo {
+        max-width: 60px;
+    }
+    
+    .app-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .col-8.col-md-2 {
+        flex: 0 0 auto;
+        max-width: 140px;
+    }
+    
+    .logo {
+        max-width: 40px; /* Much smaller for mobile */
+    }
+    
+    .app-name {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .col-8.col-md-2 {
+        flex: 0 0 auto;
+        max-width: 130px;
+    }
+    
+    .logo {
+        max-width: 35px; /* Extremely reduced for small screens */
+    }
+    
+    .app-name {
+        font-size: 14px;
+        margin-left: 4px;
+    }
 }
 
 /*------
@@ -1031,15 +1105,20 @@ Responsive
 ---------------*/
 @media(max-width: 991px){
     .navbar-toggler{
+        border-color: white; /* White border */
+        padding: 0.5rem 0.75rem; /* Adjust padding for better appearance */
         background-color: var(--main-color);
         box-shadow: var(--shadow-black-300);
         height: 34px;
         width: 44px;
-        padding:0;
         font-size: 17px;
         color: #ffffff;
     }
 
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
     .navbar-nav{
         background-color: var(--main-color);
         box-shadow: var(--shadow-black-300);
