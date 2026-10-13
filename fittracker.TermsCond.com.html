@@ -1,422 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>FitTracker - Privacy Policy & Terms</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- owl carousel css --> 
-  <link rel="stylesheet" href="css/owl.carousel.min.css"> 
-  <!-- font awesome icons --> 
-  <link rel="stylesheet" href="css/font-awesome.css"> 
-  <!-- bootstrap css --> 
-  <link rel="stylesheet" href="css/bootstrap.min.css"> 
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- logo browser-->
-  <link rel="icon" href="img/logo_fit.png">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* Modern Font */
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
-
-    /* Solid Blue Background for Header */
-    .navbar {
-      background: #007bff; /* Solid blue */
-      color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar a {
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      color: #f8f9fa;
-    }
-
-    .navbar-toggler {
-      border-color: white;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-
-    /* Add more space between the header and the content */
-    .privacy-terms {
-      padding-top: 120px;
-      padding-bottom: 80px;
-    }
-
-    /* Card Styling for Sections */
-    .policy-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      margin-bottom: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .policy-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .policy-card h3 {
-      color: #007bff;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .policy-card h4 {
-      color: #333;
-      margin-top: 20px;
-      font-weight: 500;
-    }
-
-    .policy-card p {
-      color: #555;
-      line-height: 1.8;
-    }
-
-    /* Icons for Headings */
-    .policy-card h3 i {
-      margin-right: 10px;
-      color: #007bff;
-    }
-
-    /* Footer Styling */
-    .footer {
-      background: #007bff; /* Solid blue */
-      color: white;
-      padding: 40px 0;
-    }
-
-    .footer h3 {
-      color: #fff;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .footer a {
-      color: #f8f9fa;
-      transition: color 0.3s ease;
-    }
-
-    .footer a:hover {
-      color: #ffdd57; /* Yellow hover color for contrast */
-      text-decoration: none;
-    }
-
-    .footer .form-control {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-    }
-
-    .footer .form-control::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .footer .btn {
-      background: #ffffff; /* Yellow button for contrast */
-      color: #333;
-      border: none;
-      transition: background 0.3s ease;
-    }
-
-    .footer .btn:hover {
-      background: #ffcc00; /* Darker yellow on hover */
-    }
-
-    .copyright-text {
-      margin-top: 20px;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    /* Logo Styles - Significantly Revised */
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo {
-      max-width: 150px; 
-      height: auto; 
-      width: 100%;
-    }
-    
-    .app-name {
-      font-size: 24px; 
-      margin-left: 10px;
-    }
-
-    /* Adjust navbar brand container width */
-    .navbar .col-8.col-md-2 {
-      display: flex;
-      align-items: center;
-    }
-    
-    /* Responsive Adjustments - Much More Aggressive Size Reduction */
-    @media (max-width: 991px) {
-      .navbar .col-8.col-md-2 {
-        flex: 0 0 auto;
-        max-width: 180px;
-      }
-      
-      .logo {
-        max-width: 80px;
-      }
-      
-      .app-name {
-        font-size: 20px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .navbar .col-8.col-md-2 {
-        flex: 0 0 auto;
-        max-width: 160px;
-      }
-      
-      .logo {
-        max-width: 60px;
-      }
-      
-      .app-name {
-        font-size: 18px;
-      }
-
-      .privacy-terms {
-        padding-top: 120px; 
-        padding-bottom: 80px;
-      }
-
-      .policy-card {
-        padding: 20px;
-      }
-
-      .footer .form-control {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .navbar .col-8.col-md-2 {
-        flex: 0 0 auto;
-        max-width: 140px;
-      }
-      
-      .logo {
-        max-width: 40px; 
-      }
-      
-      .app-name {
-        font-size: 16px;
-        margin-left: 5px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .navbar .col-8.col-md-2 {
-        flex: 0 0 auto;
-        max-width: 130px;
-      }
-      
-      .logo {
-        max-width: 35px; /* Extremely reduced for small screens */
-      }
-      
-      .app-name {
-        font-size: 14px;
-        margin-left: 4px;
-      }
-
-      .privacy-terms {
-        padding-top: 150px;
-        padding-bottom: 80px;
-      }
-
-      .policy-card {
-        padding: 15px;
-      }
-    }
-  </style>
+  <title>Privacy Policy &amp; Terms — FitTracker</title>
+  <meta name="description" content="How FitTracker handles your data, camera and pose information, and the terms of using the app.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/logo_fit_web.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <!--- navbar start --->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <header class="nav" id="nav">
     <div class="container">
-      <!-- Brand - Changed div structure for better control -->
-      <div class="col-3 col-md-2">
-        <a href="fittracker.com.html" class="logo-container">
-          <img src="img/logo_fit.png" alt="FitTracker Logo" class="logo">
-          <span class="app-name">FitTracker</span>
-        </a>
-      </div>
-      
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <i class="fas fa-bars"></i>
+      <a href="fittracker.com.html" class="brand" aria-label="FitTracker home">
+        <img src="img/logo_fit_web.png" alt="" width="640" height="339">
+        FitTracker
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-      
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#features">features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#downloads">download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#howitworks">how it works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#testimonials">reviews</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#pricing">prices</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#faq">faq</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fittracker.com.html#contact">contacts</a>
-          </li>
-        </ul>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="fittracker.com.html#whats-new">What's new</a>
+        <a href="fittracker.com.html#ai-coach">AI Coach</a>
+        <a href="fittracker.com.html#plans">Plans</a>
+        <a href="fittracker.com.html#progress">Progress</a>
+        <a href="fittracker.com.html#exercises">Exercises</a>
+        <a href="fittracker.com.html#faq">FAQ</a>
+        <a href="fittracker.com.html#download" class="btn btn--primary btn--sm"><i class="fab fa-google-play" aria-hidden="true"></i> Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="legal-hero">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy Policy &amp; Terms</h1>
+        <p class="muted" style="max-width:640px;font-size:1.08rem">How we handle your data and the rules for using FitTracker. Short version: your camera feed never leaves your phone.</p>
+      </div>
+    </section>
+
+    <div class="container legal-layout">
+      <aside class="toc" aria-label="On this page">
+        <h4>On this page</h4>
+        <a class="toc-group" href="#privacy-policy">Privacy Policy</a>
+        <a href="#overview">Overview</a>
+        <a href="#camera">Camera &amp; pose data</a>
+        <a href="#collect">Information we collect</a>
+        <a href="#use">How we use it</a>
+        <a href="#leaderboard">Leaderboard &amp; visibility</a>
+        <a href="#protection">Data protection</a>
+        <a href="#rights">Your rights</a>
+        <a class="toc-group" href="#terms-conditions">Terms &amp; Conditions</a>
+        <a href="#acceptance">Acceptance</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#responsibilities">Your responsibilities</a>
+        <a href="#restrictions">Use restrictions</a>
+        <a href="#health">Health disclaimer</a>
+        <a href="#ip">Intellectual property</a>
+        <a href="#liability">Limitation of liability</a>
+        <a href="#termination">Termination</a>
+        <a href="#changes">Changes</a>
+      </aside>
+
+      <div class="legal-content">
+        <section id="privacy-policy">
+          <h2><i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy</h2>
+
+          <h3 id="overview">Overview</h3>
+          <p>At FitTracker we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you use our mobile application.</p>
+
+          <h3 id="camera">Camera and pose data</h3>
+          <div class="highlight">
+            <p><i class="fas fa-lock" aria-hidden="true"></i> The camera is used only to detect your body joints in real time and count your repetitions. The video feed is processed on your device as it happens: no video or image is ever recorded, saved or shared. Only the resulting joint angles are used, and only to track your exercise.</p>
+          </div>
+
+          <h3 id="collect">Information we collect</h3>
+          <ul>
+            <li>Personal identification information (username, email address, and the profile details you choose to provide such as date of birth, gender, weight and experience level).</li>
+            <li>Training data you enter or complete in the app (exercises, sets, reps, weight, rest, completion status).</li>
+            <li>Device information.</li>
+            <li>Usage data and analytics.</li>
+          </ul>
+
+          <h3 id="use">How we use your information</h3>
+          <ul>
+            <li>Provide the service: schedules, progress statistics, personal records and leaderboards.</li>
+            <li>Personalise your experience.</li>
+            <li>Analyse app performance and improve our application.</li>
+            <li>Send notifications such as reminders and progress updates, which you can disable at any time.</li>
+          </ul>
+
+          <h3 id="leaderboard">Leaderboard and visibility</h3>
+          <p>Appearing on the leaderboard is optional. You can choose in the app settings whether to participate and whether your username is displayed.</p>
+
+          <h3 id="protection">Data protection</h3>
+          <p>We implement a variety of security measures to maintain the safety of your personal information. Accounts are managed through Google Firebase Authentication, email addresses must be verified, and you can enable a biometric lock (fingerprint or face) on your device. We do not sell your personal information or share it with third parties without your consent, except as required by law.</p>
+
+          <h3 id="rights">Your rights</h3>
+          <p>You have the right to access, correct or delete your personal information. To exercise these rights, use the Help Center section in the app (Settings › Help Center) or write to <a href="mailto:cararlind@gmail.com" style="color:var(--accent-2)">cararlind@gmail.com</a>. Once an account deletion request is confirmed, all your data is permanently removed.</p>
+        </section>
+
+        <section id="terms-conditions">
+          <h2><i class="fas fa-file-contract" aria-hidden="true"></i> Terms &amp; Conditions</h2>
+
+          <h3 id="acceptance">Acceptance of terms</h3>
+          <p>By accessing and using our application, you accept and agree to be bound by the terms and provisions of this agreement. Please read these terms carefully.</p>
+
+          <h3 id="eligibility">Eligibility</h3>
+          <p>You must be at least 13 years old to use FitTracker. By using the app, you confirm that you meet this requirement.</p>
+
+          <h3 id="responsibilities">User rights and responsibilities</h3>
+          <ul>
+            <li>Create and maintain an accurate account.</li>
+            <li>Protect your account credentials; you are responsible for all activity under your account.</li>
+            <li>Use the service in compliance with applicable laws.</li>
+          </ul>
+
+          <h3 id="restrictions">Use restrictions</h3>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Violate any local, state, national or international law.</li>
+            <li>Transmit any viruses or malicious code.</li>
+            <li>Attempt to gain unauthorised access to our systems.</li>
+          </ul>
+
+          <h3 id="health">Health disclaimer</h3>
+          <p>FitTracker provides automated feedback for informational purposes only and is not a substitute for advice from a qualified trainer or medical professional. Consult a doctor before starting any exercise program and stop immediately if you feel pain or discomfort.</p>
+
+          <h3 id="ip">Intellectual property</h3>
+          <p>All content, features and functionality are and will remain the exclusive property of FitTracker and are protected by copyright, trademark and other intellectual property laws.</p>
+
+          <h3 id="liability">Limitation of liability</h3>
+          <p>Our application is provided "as is" without any representations or warranties. FitTracker will not be liable for any indirect, incidental or consequential damages arising from the use of this service.</p>
+
+          <h3 id="termination">Termination</h3>
+          <p>We may terminate or suspend your account and access to the service immediately, without prior notice or liability, for violations of these terms.</p>
+
+          <h3 id="changes">Modifications to these terms</h3>
+          <p>We reserve the right to modify these terms and this policy at any time. Changes are published on this page; continued use of the application after changes constitutes acceptance of the new terms.</p>
+          <p class="muted"><small>Last updated: October 2026</small></p>
+        </section>
       </div>
     </div>
-  </nav>
-  <!--- Navbar end-->
+  </main>
 
-  <!-- Privacy Policy & Terms Section Start -->
-  <section class="privacy-terms section-padding">
+  <footer class="footer">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title text-center">
-            <h2><span>Privacy</span> Policy & <span>Terms</span></h2>
-            <p class="text-muted">Learn how we handle your data and the terms of using FitTracker.</p>
-          </div>
+      <div class="footer-grid">
+        <div>
+          <a href="fittracker.com.html" class="brand"><img src="img/logo_fit_web.png" alt="" width="640" height="339"> FitTracker</a>
+          <p>The AI-powered workout tracker that counts your reps, scores your form and keeps you consistent. Made in Genoa, Italy.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="fittracker.com.html#whats-new">What's new</a></li>
+            <li><a href="fittracker.com.html#ai-coach">AI Coach</a></li>
+            <li><a href="fittracker.com.html#plans">Plan Wizard</a></li>
+            <li><a href="fittracker.com.html#exercises">Exercises</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="fittracker.com.html#faq">FAQ</a></li>
+            <li><a href="fittracker.com.html#contact">Contact</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.arlsapp.fittracker.fit_tracker" target="_blank" rel="noopener">Google Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy-policy">Privacy policy</a></li>
+            <li><a href="#terms-conditions">Terms &amp; conditions</a></li>
+          </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="policy-card">
-            <h3><i class="fas fa-shield-alt"></i>Privacy Policy</h3>
-            <p>Your privacy is important to us. This Privacy Policy explains how FitTracker collects, uses, and protects your personal information when you use our app and services.</p>
-            <h4>Information We Collect</h4>
-            <p>We may collect personal information such as your name, email address, and fitness data when you register and use our app.</p>
-            <h4>How We Use Your Information</h4>
-            <p>We use your information to provide and improve our services, personalize your experience, and communicate with you.</p>
-            <h4>Data Security</h4>
-            <p>We implement security measures to protect your data from unauthorized access and misuse.</p>
-            <h4>Third-Party Services</h4>
-            <p>We do not share your personal information with third-party services without your consent, except as required by law.</p>
-            <h4>Changes to This Policy</h4>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
-          </div>
-          <div class="policy-card">
-            <h3><i class="fas fa-file-contract"></i>Terms & Conditions</h3>
-            <p>By using FitTracker, you agree to these Terms & Conditions. Please read them carefully.</p>
-            <h4>Eligibility</h4>
-            <p>You must be at least 13 years old to use FitTracker. By using the app, you confirm that you meet this requirement.</p>
-            <h4>User Responsibilities</h4>
-            <p>You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account.</p>
-            <h4>Limitation of Liability</h4>
-            <p>FitTracker is not liable for any indirect, incidental, or consequential damages arising from your use of the app.</p>
-            <h4>Termination</h4>
-            <p>We reserve the right to terminate or suspend your account at any time for violations of these terms.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Privacy Policy & Terms Section End -->
-
-  <!--- Footer section start --->
-  <footer class="footer section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-5">
-          <div class="footer-col">
-            <h3>About Us</h3>
-            <p>FitTracker is a fitness app developed in 2025 that aims to help gym enthusiasts keep track of their gym progress.</p>
-          </div> 
-        </div>
-        <div class="col-md-2 col-sm-12">
-          <div class="footer-col">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="TermsCond.html#privacy-policy">Privacy policy</a></li>
-              <li><a href="TermsCond.html#terms-conditions">Terms & conditions</a></li>
-            </ul>
-          </div> 
-        </div>
-        <div class="col-md-2 col-sm-12">
-          <div class="footer-col">
-            <h3>Social</h3>
-            <ul>
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.instagram.com/">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/">Linkedin</a></li>
-            </ul>
-          </div> 
-        </div>
-        <div class="col-md-5 col-sm-12">
-          <h4 class="text-light">Newsletter</h4>
-          <p class="text-light">Subscribe to the newsletter and stay updated</p>
-          <form class="form-inline">
-            <div class="col pl-0">
-              <div class="input-group pr-5">
-                <input type="text" class="form-control bg-light text-dark" id="inlineFormInput" placeholder="Email">
-                <div class="input-group-prepend">
-                  <button type="button" class="btn btn-3" onClick="window.location.reload();">
-                    <i class="fas fa-paper-plane"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="copyright-text">FitTracker | Genoa, Italy | Tel +39 011 234 1234</p>
-        </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> FitTracker. All rights reserved.</span>
+        <span>Genoa, Italy</span>
       </div>
     </div>
   </footer>
-  <!--- Footer section end --->
 
-<!-- jquery js -->
-<script src="js/jquery.min.js"></script>
-<!-- popper js -->
-<script src="js/popper.min.js"></script>
-<!-- bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
-<!-- owl carousel js -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- ScrollIt js -->
-<script src="js/scrollIt.min.js"></script>
-<!-- main js -->
-<script src="js/main.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
