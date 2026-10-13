@@ -48,6 +48,8 @@
   /* ---------- Reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal, #weights");
   if ("IntersectionObserver" in window) {
+    // Enable the hidden-until-scrolled state only now that the observer exists.
+    document.documentElement.classList.add("js-reveal");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) {
